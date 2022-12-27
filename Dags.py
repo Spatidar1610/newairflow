@@ -51,7 +51,7 @@ dag2_dataset = Dataset('s3://dag2/output_1.txt', extra={'hi': 'bye'})
 with DAG(
     dag_id='dataset_produces_1',
     catchup=False,
-    start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
+    start_date=pendulum.datetime(2021, 12, 1, tz="UTC"),
     schedule='@daily',
     tags=['produces', 'dataset-scheduled'],
 ) as dag1:
